@@ -1,21 +1,26 @@
 # Thi đua 11A3
 
-Ứng dụng web responsive theo dõi thi đua lớp 11A3, năm học 2026–2027.
+Bản thử nghiệm giao diện bảng thi đua lớp 11A3.
 
-## Mã nguồn
+## Tính năng hiện có
 
-Bản mã nguồn ban đầu gồm HTML, CSS, JavaScript và SQL cho Supabase. Đây là bản khởi đầu, chưa triển khai production.
+- Bảng xếp hạng 4 tổ với điểm nền 350.
+- Ghi sự kiện điểm theo tổ.
+- Trạng thái chờ duyệt, duyệt hoặc từ chối sự kiện.
+- Lưu dữ liệu nháp trong localStorage của trình duyệt.
+- Giao diện thích ứng với điện thoại và máy tính.
 
-## Chạy bản nháp
+## Chạy thử
 
-Mở `index.html` trong trình duyệt hoặc chạy `npm install` rồi `npm start`.
+Mở `index.html` trong trình duyệt hoặc chạy máy chủ tĩnh:
 
-## Cấu hình cloud
+```bash
+npm install
+npm start
+```
 
-Sao chép `config.js.example` thành `config.js`, sau đó điền Supabase Project URL và Publishable key. Không đưa Supabase Secret key vào mã phía trình duyệt hoặc repository.
+## Giới hạn quan trọng
 
-Chạy `supabase/schema.sql` trong SQL Editor của Supabase trước khi bật chế độ cloud. Kiểm thử Row Level Security (RLS) với từng vai trò trước khi sử dụng dữ liệu thật.
+Đây hiện là **bản demo phía trình duyệt**, chưa kết nối Supabase hay cơ sở dữ liệu dùng chung. Dữ liệu chỉ nằm trên thiết bị/trình duyệt đang dùng và có thể bị mất khi xóa dữ liệu trang. Nút duyệt chỉ thay đổi trạng thái trong bản nháp, không phải quy trình xác nhận chính thức.
 
-## Lưu ý
-
-Tài khoản `demo` / `123456` (nếu có trong bản nháp) chỉ dùng thử, không dùng làm thông tin đăng nhập thật. Không đưa dữ liệu cá nhân của học sinh lên bản demo hoặc repository công khai.
+Không nhập thông tin cá nhân thật của học sinh vào bản demo. Trước khi dùng thực tế cần xây dựng xác thực, phân quyền và cơ sở dữ liệu an toàn.
