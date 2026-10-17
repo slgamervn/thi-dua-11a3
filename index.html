@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="vi">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#101828">
+<meta name="description" content="Bảng thi đua lớp 11A3">
+<title>Thi đua 11A3</title>
+<link rel="stylesheet" href="styles.css">
+<script defer src="app.js"></script>
+</head>
+<body>
+<header class="top"><div class="brand">11<span>A3</span></div><div><p class="eyebrow">TRƯỜNG THPT TRẦN QUỐC TOẢN</p><h1>Bảng thi đua lớp</h1><p class="sub">Năm học 2026–2027 · Cùng theo dõi, cùng tiến bộ.</p></div></header>
+<main>
+<section class="notice"><strong>Chế độ bản nháp</strong><span>Dữ liệu lưu trong trình duyệt hiện tại, chưa đồng bộ đám mây.</span></section>
+<section class="stats">
+<article><span>Tổ dẫn đầu</span><strong id="leader">Tổ 1</strong><small id="leader-score">350 điểm</small></article>
+<article><span>Sự kiện chờ duyệt</span><strong id="pending">0</strong><small>Chờ lớp trưởng xác nhận</small></article>
+<article><span>Sự kiện tuần này</span><strong id="count">0</strong><small>Ghi nhận trên thiết bị</small></article>
+<article><span>Tuần thi đua</span><strong id="week">—</strong><small>Bắt đầu từ thứ Hai</small></article>
+</section>
+<section class="panel"><div class="heading"><div><h2>Bảng xếp hạng các tổ</h2><p>Điểm nền 350 điểm mỗi tổ</p></div></div><div id="ranking" class="ranking"></div></section>
+<div class="columns">
+<section class="panel"><h2>Ghi sự kiện điểm</h2><form id="event-form">
+<label for="group">Tổ</label><select id="group"><option value="1">Tổ 1</option><option value="2">Tổ 2</option><option value="3">Tổ 3</option><option value="4">Tổ 4</option></select>
+<label for="scope">Phạm vi</label><select id="scope"><option value="group">Cả tổ</option><option value="student">Cá nhân (bản nháp)</option></select>
+<label for="criterion">Tiêu chí</label><select id="criterion"><option value="-20">Không đeo bảng tên (−20)</option><option value="-50">Vi phạm nội quy (−50)</option><option value="-100">Thiếu tôn trọng giáo viên (−100)</option><option value="2">Phát biểu (+2)</option><option value="5">Bài tập đạt yêu cầu (+5)</option><option value="10">Tuyên dương (+10)</option></select>
+<label for="note">Mô tả</label><input id="note" maxlength="250" placeholder="Mô tả ngắn gọn sự việc">
+<button class="primary" type="submit">Gửi chờ duyệt</button>
+</form></section>
+<section class="panel"><div class="heading"><div><h2>Lịch sử sự kiện</h2><p>Chỉ sự kiện đã duyệt mới tính vào điểm</p></div><button id="reset" class="quiet" type="button">Xóa dữ liệu nháp</button></div><div id="events" class="events"></div></section>
+</div>
+<p class="foot">Thi đua 11A3 · Bản thử nghiệm. Không nhập dữ liệu cá nhân thật vào bản demo.</p>
+</main>
+<div id="toast" role="status" aria-live="polite"></div>
+</body></html>
