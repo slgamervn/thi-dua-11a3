@@ -1,0 +1,9 @@
+{
+  "name": "thi-dua-11a3",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Bảng thi đua lớp 11A3 - THPT Trần Quốc Toản",
+  "scripts": { "start": "npx serve ." },
+  "dependencies": { "@supabase/supabase-js": "^2.57.0" },
+  "devDependencies": { "serve": "^14.2.4" }
+}
